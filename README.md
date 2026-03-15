@@ -1,4 +1,4 @@
-# Front Page
+# Home Page
 
 A Pen created on CodePen.
 

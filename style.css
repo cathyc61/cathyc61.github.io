@@ -1,9 +1,8 @@
-/* CSS Variables for a Pastel Theme */
 :root {
     --bg-color: #fff0f5; /* Lavender blush */
-    --nav-bg: #ffb6c1; /* Light pink */
+    --nav-bg: #ffa4c2; /* Light pink #ffb6c1*/
     --text-main: #5c4d5c;
-    --accent: #ff69b4; /* Hot pink */
+    --accent: #ff71a0;
     --card-bg: #ffffff;
 }
 
