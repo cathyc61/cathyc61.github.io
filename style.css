@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* NEW FONT APPLIED HERE */
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -62,8 +61,58 @@ nav {
 
 .nav-links a:hover {
     color: var(--text-main);
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
 }
+
+/* --- Dropdown Styles on Desktop --- */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--card-bg);
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    list-style: none;
+    z-index: 101;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    color: var(--text-main);
+    padding: 0.8rem 1.5rem;
+    display: block;
+    font-weight: 600;
+}
+
+.submenu a:hover {
+    background-color: var(--bg-color);
+    color: var(--accent);
+    transform: none; /* Disable the bounce effect for submenu items */
+}
+
+/* Show submenu on hover for desktop */
+@media (min-width: 769px) {
+    .dropdown:hover .submenu {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
 /* Mobile Menu Icon */
 .menu-toggle {
@@ -181,10 +230,33 @@ footer {
         display: flex;
     }
 
+    .nav-links li {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+  
     .menu-toggle {
         display: block;
     }
 
+ /* Mobile Submenu Styles */
+    .submenu {
+        position: static; /* Flows naturally down the page */
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent */
+        border-radius: 0;
+        margin-top: 0.5rem;
+    }
+    
+    .submenu a {
+        color: white;
+    }
+    
+    .submenu a:hover {
+        background-color: transparent;
+        color: var(--text-main);
+    }
+  
     h1 {
         font-size: 2.2rem;
     }
